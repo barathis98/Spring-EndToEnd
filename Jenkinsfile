@@ -11,9 +11,7 @@ pipeline{
 
         stage("Build"){
             steps{
-                script{
-                    app = docker.build("Persist:latest")
-                }
+               sh "docker --version"
             }
         }
     }
