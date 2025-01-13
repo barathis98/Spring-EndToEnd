@@ -5,14 +5,6 @@ pipeline{
     // }
 
     stages{
-             stage('Initialize'){
-                steps{
-                    script{
-                        def dockerHome = tool 'myDocker'
-                        env.PATH = "${dockerHome}/bin:${env.PATH}"
-                    }
-                }
-    }
         stage("Clone Repo"){
             steps{
                 script{
@@ -24,7 +16,7 @@ pipeline{
         stage("Build"){
             steps{
                      script {
-            sh "docker --version"
+            sh "/opt/homebrew/bin/docker --version"
             sh "docker build -t persist:latest ."
         }
             }
