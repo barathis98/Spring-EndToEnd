@@ -1,7 +1,11 @@
 pipeline{
     agent any
-    tools{
-        dockerTool "myDocker"
+    // tools{
+    //     dockerTool "myDocker"
+    // }
+     stage('Initialize'){
+        def dockerHome = tool 'myDocker'
+        env.PATH = "${dockerHome}/bin:${env.PATH}"
     }
     stages{
         stage("Clone Repo"){
