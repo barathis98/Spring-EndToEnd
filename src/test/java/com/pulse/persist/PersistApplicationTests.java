@@ -10,14 +10,6 @@ import java.util.UUID;
 @SpringBootTest
 class PersistApplicationTests {
 
-   @BeforeEach
-   public void setUp(){
-   }
 
-    @Test
-    void testOrderRepository(){
-
-
-    }
 
 }

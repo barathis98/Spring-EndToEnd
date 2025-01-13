@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-PersistApplication<persist>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.pulse.persist.PersistApplication",
+            "projectName": "persist",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}
