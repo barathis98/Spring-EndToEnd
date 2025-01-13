@@ -1,5 +1,9 @@
 pipeline{
     agent any
+    tools{
+        maven "myMaven"
+        jdk "jdk"
+    }
 
     stages{
         stage("Clone Repo"){
