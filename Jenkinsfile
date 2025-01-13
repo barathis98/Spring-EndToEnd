@@ -1,8 +1,5 @@
 pipeline{
     agent any
-    // tools{
-    //     dockerTool "myDocker"
-    // }
 
     stages{
         stage("Clone Repo"){
@@ -13,7 +10,15 @@ pipeline{
             }
         }
 
-        stage("Build"){
+        stage("Build maven"){
+            steps{
+                script{
+                    sh "mvn clean package"
+                }
+            }
+        }
+
+        stage("Build docker image"){
             steps{
                      script {
             sh "docker --version"
