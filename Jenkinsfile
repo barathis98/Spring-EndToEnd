@@ -16,7 +16,7 @@ pipeline{
         stage("Build"){
             steps{
                      script {
-            sh "/opt/homebrew/bin/docker --version"
+            sh "docker --version"
             sh "docker build -t persist:latest ."
         }
             }
