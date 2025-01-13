@@ -1,5 +1,8 @@
 pipeline{
     agent any
+    tools{
+        docker "myDocker"
+    }
     stages{
         stage("Clone Repo"){
             steps{
