@@ -3,11 +3,12 @@ pipeline{
     // tools{
     //     dockerTool "myDocker"
     // }
-     stage('Initialize'){
+
+    stages{
+             stage('Initialize'){
         def dockerHome = tool 'myDocker'
         env.PATH = "${dockerHome}/bin:${env.PATH}"
     }
-    stages{
         stage("Clone Repo"){
             steps{
                 script{
